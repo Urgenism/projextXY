@@ -1,7 +1,15 @@
 .form {
   &__wrapper {
     max-width: 70rem;
-    margin: 4rem auto;
+    margin: 4rem auto 8rem;
+  }
+
+  &--rocket-bg {
+    background-image: url(../img/rocket.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 24rem;
+
   }
 
   &__row {
@@ -25,6 +33,10 @@
     }
 
     &-select {}
+  }
+
+  &__button {
+    text-align: right;
   }
 }
 
