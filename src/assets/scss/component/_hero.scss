@@ -1,0 +1,28 @@
+.hero {
+  background: linear-gradient(rgba($color-black, 0.5), rgba($color-black, 0.5)), url(../img/banner.png) no-repeat top center;
+  padding: 2.4rem 0;
+  background-size: cover;
+
+
+  &__brand {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    margin: 9.6rem 0 12rem;
+  }
+
+  &__headline {
+    color: $color-white;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 2.4rem;
+  }
+
+  &__sub-headline {
+    font-family: $font-family-secondary;
+    font-size: 1.6rem;
+    color: $color-gray;
+  }
+}
