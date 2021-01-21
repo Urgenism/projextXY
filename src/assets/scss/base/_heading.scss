@@ -25,6 +25,13 @@
       transform: translate(-50%, 0);
     }
   }
+
+  &__helper-text {
+    display: block;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $color-gray-3;
+  }
 }
 
 .heading-secondary {

@@ -1,0 +1,33 @@
+.container {
+  padding: 0 1.6rem;
+  margin: 0 auto;
+
+  @include mq('tablet') {
+    max-width: 72rem;
+  }
+
+  @include mq('tablet-wide') {
+    max-width: 96rem;
+  }
+
+  @include mq('desktop') {
+    max-width: 114rem;
+  }
+
+  @include mq('desktop-wide') {
+    max-width: 132rem;
+  }
+}
+
+.section {
+  padding: 5.6rem 0;
+
+  &--gray {
+    background-color: $color-gray-2;
+  }
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
