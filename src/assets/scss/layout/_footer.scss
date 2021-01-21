@@ -7,23 +7,71 @@
 
   &__row {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 -1.6rem;
+
+    @include mq('phablet') {
+      flex-direction: row;
+    }
   }
 
   &__detail {
-    flex: 0 0 40%;
+    flex: 0 0 100%;
+    padding: 0 1.6rem;
+    margin-bottom: 2rem;
+
+    @include mq('phablet') {
+      flex: 0 0 50%;
+    }
+
+    @include mq('tablet-wide') {
+      flex: 0 0 40%;
+      margin: 0;
+    }
   }
 
   &__social {
-    flex: 0 0 20%;
+    flex: 0 0 100%;
+    padding: 0 1.6rem;
+    margin-bottom: 2rem;
+
+    @include mq('phablet') {
+      flex: 0 0 50%;
+    }
+
+    @include mq('tablet-wide') {
+      flex: 0 0 20%;
+      margin: 0;
+    }
   }
 
   &__nav {
-    flex: 0 0 20%;
+    flex: 0 0 100%;
+    padding: 0 1.6rem;
+    margin-bottom: 2rem;
+
+    @include mq('phablet') {
+      flex: 0 0 50%;
+    }
+
+    @include mq('tablet-wide') {
+      flex: 0 0 20%;
+      margin-bottom: 0;
+    }
   }
 
   &__contact {
-    text-align: right;
-    flex: 0 0 10%;
+    flex: 0 0 100%;
+    padding: 0 1.6rem;
+
+    @include mq('phablet') {
+      flex: 0 0 50%;
+    }
+
+    @include mq('tablet-wide') {
+      flex: 0 0 20%;
+    }
   }
 
   &__desc {
@@ -32,7 +80,11 @@
   }
 
   &__terms {
-    margin-top: 1.6rem;
+    margin-top: 0.8rem;
+
+    @include mq('tablet-wide') {
+      margin-top: 1.6rem;
+    }
 
     span {
       display: inline-block;
@@ -55,18 +107,48 @@
   }
 
   &__title {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+
+
+    @include mq('tablet') {
+      margin-bottom: 0.8rem;
+    }
   }
 
   &__list {
     color: $color-white
   }
 
-  &__item {}
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 0.6rem;
+
+      @include mq('tablet') {
+        margin-bottom: 1rem;
+      }
+    }
+  }
 
   &__link {
     color: $color-white;
+    position: relative;
+    padding-left: 1.2rem;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      content: "\f105";
+      font: normal normal normal 1.4rem/1 FontAwesome;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: inherit;
+    }
   }
 
   &__social-list {
@@ -77,12 +159,20 @@
 
     &:not(:last-child) {
       margin-right: 1rem;
+
     }
   }
 
   &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $color-white;
-    color: $color-white;
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+    color: $color-green-2;
   }
 
   &__phone {

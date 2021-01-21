@@ -1,7 +1,12 @@
 .hero {
-  background: linear-gradient(rgba($color-black, 0.5), rgba($color-black, 0.5)), url(../img/banner.png) no-repeat top center;
+  background: linear-gradient(rgba($color-black, 0.5), rgba($color-black, 0.5)), url(../img/banner.png) no-repeat;
   padding: 2.4rem 0;
+  background-position: 75% 0;
   background-size: cover;
+
+  @include mq('tablet') {
+    background-position: top center;
+  }
 
 
   &__brand {
@@ -10,19 +15,35 @@
   }
 
   &__wrapper {
-    margin: 9.6rem 0 12rem;
+    margin: 5rem 0;
+
+    @include mq('phablet') {
+      margin: 6rem 0 9rem;
+    }
+
+    @include mq('tablet') {
+      margin: 9.6rem 0 12rem;
+    }
+
+    @include mq('desktop-wide') {
+      margin: 12rem 0 16rem;
+    }
   }
 
   &__headline {
     color: $color-white;
-    font-size: 4rem;
     line-height: 1;
     margin-bottom: 2.4rem;
+
+    @include fluid-type(400px, 1300px, 24px, 40px);
   }
 
   &__sub-headline {
     font-family: $font-family-secondary;
-    font-size: 1.6rem;
     color: $color-gray;
+
+    @include mq('tablet') {
+      font-size: 1.6rem;
+    }
   }
 }

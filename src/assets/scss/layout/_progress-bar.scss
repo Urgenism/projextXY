@@ -1,0 +1,33 @@
+.progress {
+  width: 100%;
+  margin: 2rem auto 0;
+
+  @include mq('phablet') {
+    width: 80%;
+    margin: 4rem auto 0;
+  }
+
+  &__wrapper {
+    width: 100%;
+    background-color: $color-gray-3;
+    border: 1px solid $color-black-2;
+    border-radius: 4rem;
+    overflow: hidden;
+  }
+
+  &__bar {
+    width: 0;
+    height: 1rem;
+    background-color: $color-yellow;
+    transition: all 0.3s;
+
+    &.is-completed {
+      background-color: $color-green;
+    }
+  }
+
+  &__status {
+    display: block;
+    margin-top: 1rem;
+  }
+}

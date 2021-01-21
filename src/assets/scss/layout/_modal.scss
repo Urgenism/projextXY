@@ -1,0 +1,88 @@
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &.is-open {
+    display: block;
+  }
+
+
+  &__content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 5% auto 0;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &--sm {
+      max-width: 56rem;
+    }
+  }
+
+  &__header {
+    padding: 1.6rem;
+    background-color: $color-green;
+    color: white;
+
+    @include mq('tablet') {
+      padding: 3.2rem;
+    }
+  }
+
+  &__body {
+    padding: 1.6rem 1.6rem 2rem;
+
+    @include mq('tablet') {
+      padding: 2.4rem 3.2rem;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: -1.6rem;
+    right: -1.6rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color-white, 0.8);
+    color: $color-black-2;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+
+/* Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}

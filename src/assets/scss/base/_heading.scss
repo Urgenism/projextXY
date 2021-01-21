@@ -7,9 +7,10 @@
 
 .heading-primary {
   font-family: $font-family-secondary;
-  font-size: 4rem;
   font-weight: bold;
   text-align: center;
+
+  @include fluid-type(400px, 900px, 24px, 40px);
 
   &--underline {
     position: relative;
@@ -35,5 +36,8 @@
 }
 
 .heading-secondary {
-  font-size: 2rem;
+  font-size: 2.8rem;
+  text-align: center;
+
+  @include fluid-type(400px, 900px, 24px, 28px);
 }
